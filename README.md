@@ -1,9 +1,9 @@
-# glue.codes
+# Terraform Module AWS VPC Creation
 ## Infrastructure orchestration
 
 We use [https://www.terraform.io/](Terraform) as our orchestration tool.
 
-Module to VPC orchestration.
+Module to create AWS VPC.
 
 Example:
 
