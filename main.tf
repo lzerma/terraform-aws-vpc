@@ -5,7 +5,7 @@ module "lzerma-aws-vpc" {
   stack_details = {
     stack_version = "${var.stack_details["version"]}"
     env      = "${var.environment}"
-    region    = "${var.aws["region"]}"
+    region    = "${var.stack_details["region"]}"
   }
 
   vpc_name = "${var.environment}"
