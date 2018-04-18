@@ -7,7 +7,7 @@ resource "aws_vpc" "vpc" {
   tags {
     "Name"       = "${var.vpc_name}"
     "stack_name" = "${var.vpc_name}"
-    "stack_version"   = "${var.stack_details["stack_version"]}"
+    "stack_version"   = "${var.stack_details["version"]}"
   }
 }
 
@@ -20,7 +20,7 @@ resource "aws_subnet" "default" {
   tags {
       "Name"       = "${format("%s-default", var.vpc_name)}"
       "stack_name" = "${var.vpc_name}"
-      "stack_version"   = "${var.stack_details["stack_version"]}"
+      "stack_version"   = "${var.stack_details["version"]}"
       "test" = "${format("%s%s", var.stack_details["region"], element(var.az_suffix, count.index))}"
     }
 }
@@ -34,6 +34,6 @@ resource "aws_security_group" "default" {
   tags {
       "Name"       = "${format("%s-default", var.vpc_name)}"
       "stack_name" = "${var.vpc_name}"
-      "stack_version"   = "${var.stack_details["stack_version"]}"
+      "stack_version"   = "${var.stack_details["version"]}"
     }
 }

@@ -5,11 +5,11 @@ variable "stack_details" {
   default = {
     env      = ""
     region   = ""
-    stack_version = ""
+    version = ""
   }
 }
 
-# Environment 
+# Environment
 variable "environment" {
   type    = "string"
   default = ""
@@ -29,7 +29,6 @@ variable "vpc_details" {
     dns_suffix     = ""
     num_az         = ""
     vpc_cidr_block = ""
-    stack_version = ""
   }
 }
 
